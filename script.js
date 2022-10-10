@@ -52,9 +52,13 @@ window.onload = (event) => {
     if (hausRadio.checked) {
       imageContainerHof.classList.add("hidden");
       imageContainerHaus.classList.remove("hidden");
+      tuerColorInput.parentElement.classList.add("hidden");
+      toreColorInput.parentElement.classList.add("hidden");
     } else if (hofRadio.checked) {
       imageContainerHof.classList.remove("hidden");
       imageContainerHaus.classList.add("hidden");
+      tuerColorInput.parentElement.classList.remove("hidden");
+      toreColorInput.parentElement.classList.remove("hidden");
     }
   };
   hausRadio.addEventListener("click", checkRadios);
