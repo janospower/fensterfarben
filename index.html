@@ -6,6 +6,7 @@
     <title>Fensterfarben</title>
     <link rel="stylesheet" href="styles.css" />
     <script src="script.js"></script>
+    <script src="lib/html2canvas.min.js"></script>
   </head>
   <body>
     <main>
@@ -25,6 +26,20 @@
         </div>
       </div>
     </main>
-    <aside></aside>
+    <aside>
+      <div class="color-inputs">
+        <div class="color-input">
+          <span>Fensterläden</span>
+          <input type="color" id="fensterladen-color-input" value="#0000ff" />
+        </div>
+
+        <div class="color-input">
+          <span>Fenster</span>
+          <input type="color" id="fenster-color-input" value="#ff0000" />
+        </div>
+
+        <button id="download-button" type="button">Bild herunterladen</button>
+      </div>
+    </aside>
   </body>
 </html>
