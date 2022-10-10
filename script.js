@@ -30,7 +30,7 @@ window.onload = (event) => {
   downloadButton.addEventListener("click", function () {
     html2canvas(document.querySelector(".image-container"), {
       onrendered: function (canvas) {
-        // document.body.appendChild(canvas);
+        document.body.appendChild(canvas);
         return Canvas2Image.saveAsPNG(canvas);
       },
     });
