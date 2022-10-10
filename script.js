@@ -24,7 +24,7 @@ window.onload = (event) => {
   );
 
   function watchColorInput(event, mask) {
-    document.querySelector(mask).style.backgroundColor = event.target.value;
+    document.querySelector(mask).style.color = event.target.value;
   }
 
   downloadButton.addEventListener("click", function () {
