@@ -43,9 +43,20 @@ window.onload = (event) => {
     document.querySelector(mask).style.color = event.target.value;
   }
 
-  downloadButton.addEventListener("click", function () {
-    html2canvas(document.querySelector("main")).then(function (canvas) {
-      return Canvas2Image.saveAsPNG(canvas);
-    });
-  });
+  const hausRadio = document.querySelector("#haus-radio");
+  const hofRadio = document.querySelector("#hof-radio");
+  const imageContainerHof = document.querySelector("#image-container-hof");
+  const imageContainerHaus = document.querySelector("#image-container-haus");
+
+  let checkRadios = function () {
+    if (hausRadio.checked) {
+      imageContainerHof.classList.add("hidden");
+      imageContainerHaus.classList.remove("hidden");
+    } else if (hofRadio.checked) {
+      imageContainerHof.classList.remove("hidden");
+      imageContainerHaus.classList.add("hidden");
+    }
+  };
+  hausRadio.addEventListener("click", checkRadios);
+  hofRadio.addEventListener("click", checkRadios);
 };

@@ -173,11 +173,7 @@
           </svg>
         </div>
       </div>
-      <div
-        class="image-container"
-        id="image-container-haus"
-        style="visibility: hidden"
-      >
+      <div class="image-container hidden" id="image-container-haus">
         <div class="images">
           <img src="images/haus.png" />
           <svg
@@ -220,6 +216,24 @@
     </main>
     <aside>
       <div class="color-inputs">
+        <fieldset>
+          <div>
+            <input
+              type="radio"
+              id="haus-radio"
+              name="scope"
+              value="haus"
+              checked
+            />
+            <label for="haus">Haus</label>
+          </div>
+
+          <div>
+            <input type="radio" id="hof-radio" name="scope" value="hof" />
+            <label for="hof">Hof</label>
+          </div>
+        </fieldset>
+
         <div class="color-input">
           <span>Fensterläden</span>
           <input type="color" id="fensterladen-color-input" value="#0000ff" />
