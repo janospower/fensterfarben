@@ -2,23 +2,39 @@ window.onload = (event) => {
   let fensterladenColorInput = document.querySelector(
     "#fensterladen-color-input"
   );
-
-  let fensterColorInput = document.querySelector("#fenster-color-input");
-
-  let downloadButton = document.querySelector("#download-button");
-
   fensterladenColorInput.addEventListener(
     "input",
     function (event) {
       watchColorInput(event, "#fensterladen-mask");
+      watchColorInput(event, "#fensterladen-mask-hof");
     },
     false
   );
 
+  let fensterColorInput = document.querySelector("#fenster-color-input");
   fensterColorInput.addEventListener(
     "input",
     function (event) {
       watchColorInput(event, "#fenster-mask");
+      watchColorInput(event, "#fenster-mask-hof");
+    },
+    false
+  );
+
+  let tuerColorInput = document.querySelector("#tuer-color-input");
+  tuerColorInput.addEventListener(
+    "input",
+    function (event) {
+      watchColorInput(event, "#tuer-mask");
+    },
+    false
+  );
+
+  let toreColorInput = document.querySelector("#tore-color-input");
+  toreColorInput.addEventListener(
+    "input",
+    function (event) {
+      watchColorInput(event, "#tore-mask");
     },
     false
   );
